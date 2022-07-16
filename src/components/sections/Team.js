@@ -26,6 +26,10 @@ align-items: center;
 margin: 1rem auto;
 border-bottom: 2px solid ${props => props.theme.text};
 width: fit-content;
+
+@media (max-width: 40em){
+    font-size: ${props => props.theme.fontxl};
+   }
 `;
 const Container = styled.div`
 width: 75%;
@@ -34,6 +38,15 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
+
+@media (max-width: 64em){
+  width: 80%;
+ }
+
+ @media (max-width: 48em){
+    width: 90%;
+    justify-content: center;
+   }
 `
 const Item = styled.div`
 width: calc(20rem - 4vw);
@@ -52,6 +65,9 @@ border-radius: 20px;
         transform: translateY(-2 rem) scale(1.2);
     }
 }
+@media (max-width: 30em){
+    width: 70vw;
+   }
 `
 const ImageContainer = styled.div`
 width: 80%;
@@ -126,7 +142,7 @@ const Team = () =>{
         }
     }, [])
     return (
-       <Section ref={ref}>
+       <Section ref={ref} id="team">
         <Confett/>
         <Title>
             Team

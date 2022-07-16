@@ -23,7 +23,7 @@ color: ${props => props.theme.body};
 
 const Container = styled.div`
 width: 75%;
-margin: 2rem auto;
+margin: 0.1rem auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -31,6 +31,11 @@ background-color:${props => props.theme.body};
 
 border-bottom: 1px solid ${props => props.theme.text};
 
+@media (max-width: 48em){
+    
+    width: 90%;
+
+    }
 
 `
 
@@ -40,6 +45,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 color: ${props => props.theme.text};
+
+@media (max-width: 48em){
+    
+    width: 100%;
+
+    }
+
 `
 
 const IconList = styled.div`
@@ -64,6 +76,13 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-gap: 1rem;
+color: ${props => props.theme.text};
+@media (max-width: 48em){
+    
+    display: none;
+
+    }
+
 `
 
 const Item = styled.li`
@@ -75,7 +94,8 @@ cursor: pointer;
     display: block;
     width: 0;
     height: 2px;
-    background:  ${props => props.theme.text};
+    background:  ${props => props.theme.body};
+    
     transition: width 0.3s ease;
 }
 
@@ -91,16 +111,37 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 color: ${props => props.theme.text};
+background-color: ${props => props.theme.body};
 
 a{
     text-decoration: underline;
 }
+@media (max-width: 48em){
+    
+    flex-direction: column;
+    width: 100%;
+
+    span{
+        margin-bottom: 1rem;
+    }
+
+    }
+
 
 `
 const Footer = ( ) =>{
 
+    const scrollTo = (id) =>{
+        let element = document.getElementById(id)
+
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        })
+    }
     return(
-        <Section>
+        <Section id="footer">
             <Banner/>
             <Container>
                 <Left>
@@ -113,11 +154,11 @@ const Footer = ( ) =>{
                     </IconList>
                 </Left>
                 <MenuItems>
-                <Item> Home </Item>
-                <Item> About </Item>
-                <Item> Roadmap </Item>
-                <Item> Team </Item>
-                <Item> FAQs </Item>
+                <Item onClick={() => scrollTo('home')}>Home</Item>
+        <Item onClick={() => scrollTo('about')}>About</Item>
+        <Item onClick={() => scrollTo('roadmap')}>Roadmap</Item>
+        <Item onClick={() => scrollTo('team')}>Team</Item>
+        <Item onClick={() => scrollTo('Faq')}>FAQ</Item>
                 </MenuItems>
             </Container>
             <Bottom>

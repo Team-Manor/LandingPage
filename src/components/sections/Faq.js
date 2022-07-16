@@ -27,6 +27,10 @@ color: ${props => props.theme.body};
 margin: 1rem auto;
 border-bottom: 2px solid ${props => props.theme.carouselColor};
 width: fit-content;
+
+@media (max-width: 48em){
+    font-size: ${props => props.theme.fontxl};
+   }
 `;
 
 const Container = styled.div`
@@ -36,9 +40,28 @@ display: flex;
 justify-content: space-between;
 align-content: center;
 
+@media (max-width: 64em){
+    width: 80%;
+   }
+
+   @media (max-width: 48em){
+    width: 90%;
+    flex-direction: column;
+
+    &>*:last-child{
+        &>*:first-child{
+        margin-top: 0;
+        }
+    }
+   }
 `
 const Box = styled.div`
 width: 45%;
+
+@media (max-width: 64em){
+    width: 90%;
+    align-self: center;
+   }
 `
 const Faq = () =>{
 
@@ -46,7 +69,7 @@ const Faq = () =>{
 
     return(
 
-        <Section >
+        <Section id ="Faq">
             <Title>FAQ</Title>
             <Container>
                 <Box>
@@ -62,7 +85,7 @@ const Faq = () =>{
                 </Box>
                 <Box>
                 <Card title=" How To Create A Channel">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis nulla vel tincidunt volutpat. Vivamus porttitor sem ac venenatis hendrerit. Quisque efficitur nisl tellus, et tempor elit fringilla sit amet. Aenean tristique nec mi eu placerat. Sed fermentum pharetra pellentesque. Praesent a ante eros. Aenean semper, tortor ut pretium dapibus, eros quam accumsan tortor, non dictum lacus lectus sed justo. Phasellus luctus magna vel purus feugiat, rhoncus pretium sapien blandit. Aliquam feugiat odio eget leo suscipit consectetur. Morbi interdum hendrerit erat sit amet tempus.
+                    good question
                     </Card>
                     <Card  title= "When is the token launching?">
 

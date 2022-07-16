@@ -21,6 +21,20 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media(max-width: 70em){
+  width: 85%;
+  
+}
+
+@media(max-width: 64em){
+  width: 100%;
+  flex-direction: column;
+
+  &>*: last-child{
+    width: 80%;
+  }
+}
 `
 
 const Box =  styled.div `
@@ -30,6 +44,12 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+@media(max-width: 70em){
+  .mobile{
+    display:none;
+  }
+  
+}
 `
 
 const Title = styled.h2`
@@ -40,6 +60,10 @@ width: 80%;
 color: ${props => props.theme.body};
 align-self: flex-start;
 margin: 0 auto;
+
+@media (max-width: 48em){
+  font-size: ${props => props.theme.fontxl};
+}
 `
 const Subtext = styled.p`
 
@@ -71,10 +95,13 @@ margin: 1rem auto;
 const About = () =>{
 
     return(
-      <Section>
+      <Section id="about">
         <Container>
-          <Box>
-          <img src={PIC} height="700px" width="2000px"/>
+          <Box >
+            <div className="mobile">
+            <img src={PIC} height="700px" width="2000px"/>
+            </div>
+          
           </Box>
                      <Box>
                 <Title>Welcome to Manor</Title>

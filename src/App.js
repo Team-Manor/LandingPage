@@ -8,6 +8,7 @@ import Team from "./components/sections/Team"
 import About from "./components/sections/About"
 import Faq from "./components/sections/Faq"
 import Footer from "./components/sections/Footer"
+import ScrollToTop from "./components/ScrollToTop";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
       <Team />
       <Footer />
       
-     
+      <ScrollToTop/>
      </ThemeProvider>
     </>
   );
