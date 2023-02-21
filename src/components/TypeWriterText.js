@@ -83,10 +83,10 @@ const TypeWriterText = () =>{
     loop: true,
   }}
   onInit={(typewriter) => {
-    typewriter.typeString('<span class="text-1">Spammers 🦹‍♂️</span>')
+    typewriter.typeString('<span class="text-1">Doxxing 🦹‍♂️</span>')
       .pauseFor(2000)
       .deleteAll()
-      .typeString('<span class="text-2">Scammers 🧟</span>')
+      .typeString('<span class="text-2">Data Breaches 🧟</span>')
       .pauseFor(2000)
       .deleteAll()
       .typeString('<span class="text-3">Evil Bots 🤖</span>')
@@ -94,7 +94,7 @@ const TypeWriterText = () =>{
       .deleteAll()
       .start();
   }}
-/>in your chatrooms.
+/>in your safespace.
 
 
         </Title>
