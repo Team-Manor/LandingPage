@@ -158,7 +158,7 @@ return(
     </Menu>
     
     <div className="desktop">
-    <Button text="Open App" link="https://manor-inc.vercel.app/"/>
+    <a href="https://manor-inc.vercel.app"><Button text="Open App"/></a>
     </div>
     </Navbar>
 </Section>
