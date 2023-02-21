@@ -152,13 +152,13 @@ return(
         <MenuItem onClick={() => scrollTo('Faq')}>FAQ</MenuItem>
         <MenuItem>
         <div className="mobile">
-        <Button text="Open App" link="https://github.com/Dayo-Adewuyi"/>
+        <Button text="Open App" link="https://manor-inc.vercel.app/"/>
         </div>
         </MenuItem>
     </Menu>
     
     <div className="desktop">
-    <Button text="Open App" link="https://github.com/Dayo-Adewuyi"/>
+    <Button text="Open App" link="https://manor-inc.vercel.app/"/>
     </div>
     </Navbar>
 </Section>
